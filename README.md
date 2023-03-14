@@ -1,10 +1,10 @@
 ### Searchbar with custom search suggestions
 
-**Description:** a searchbar widget with custom stuggestions in dropdown format.  
+**Description:** a searchbar widget with custom suggestions in dropdown format.  
 **Dependencies:** none (written in pure JS)  
 **Accessibility:** :white_check_mark: tabbable, :white_check_mark: supports arrow keys  
 **Requirements:** basic&hairsp;&ndash;&hairsp;intermediate HTML/CSS knowledge  
-**Author:** HT (@&#x200A;glenthemes)  
+**Author:** HT ([@&#x200A;glenthemes](https://glenthemes.tumblr.com))   
 
 #### Before we begin:
 This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&#x200B;r. However, you're free to use this for your own site or projects. Just remember that the `<form>`'s `action` URL and `method` type will vary depending on what platform you're using.
