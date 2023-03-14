@@ -7,11 +7,11 @@
 **Author:** HT ([@&#x200A;glenthemes](https://glenthemes.tumblr.com))   
 
 #### Before we begin:
-This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&#x200B;r. However, you're free to use this for your own site or projects. Just remember that the `<form>`'s `action` URL and `method` type will vary depending on what platform you're using.
+This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&#x200B;r. However, you're free to use this for your own site or projects. Just remember that the `<form>`'s `action` URL will vary depending on what platform you're using.
 
 ---
 
-##### Table of Contents:
+#### Table of Contents:
 - [demo](#demo)
 - [enable tumblr settings](#tumblr-settings)
 - Installation instructions:
