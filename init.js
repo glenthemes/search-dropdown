@@ -67,6 +67,33 @@ let lpyxg = setInterval(() => {
 	}
 },0);
 
+function hrqnc(){
+	if(srchSgstns.offsetHeight > 0){
+		clearInterval(lpyxg);
+		srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
+		// console.log(srchSgstns.offsetHeight)
+	}
+}
+
+window.addEventListener("load", () => {
+	hrqnc();
+})
+
+window.addEventListener("resize", () => {
+	hrqnc();
+})
+
+let qfryi;
+if(typeof(Event) === "function"){
+    qfryi = new Event("resize");
+} else {
+	/* IE */
+    qfryi = document.createEvent("Event");
+    qfryi.initEvent("resize", true, true);
+}
+
+window.dispatchEvent(qfryi);
+
 /*----- KEEP TRACK OF TYPING IN <INPUT> -----*/
 let srchFieldVal = "";
 srchField.addEventListener("keyup", (e) => {
@@ -302,4 +329,4 @@ srchForm.addEventListener("submit", (e) => {
 	}
 })
 
-});//end DOMContentloaded
+});//end DOMcontentloaded
