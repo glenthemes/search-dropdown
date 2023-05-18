@@ -7,7 +7,7 @@
 **Author:** HT ([@&#x200A;glenthemes](https://glenthemes.tumblr.com))   
 
 #### Before we begin:
-This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&#x200B;r. However, you're free to use this for your own site or projects. Just remember that the `<form>`'s `action` URL will vary depending on what platform you're using.
+This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&#x200B;r, so the `<input>`'s `value` is `{SearchQuery}`, which is [a "block" unique to 𝗧𝘂𝗺𝗯𝗹𝗿](https://www.tumblr.com/docs/en/custom_themes#search). However, you're free to use this for your own site or projects. Just remember that the `<form>`'s `action` URL will vary depending on what platform you're using.
 
 ---
 
