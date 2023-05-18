@@ -1,0 +1,119 @@
+/*----------------------------------------------
+    
+    searchbar with custom search suggestions
+    - written by HT (@glenthemes)
+	
+    github.com/glenthemes/search-dropdown
+    
+----------------------------------------------*/
+
+/* box-sizing:border-box */
+.searchbar-field, .searchbar-button button, .search-suggestions a {
+	box-sizing:border-box;
+}
+
+/* <form> */
+.searchblock {
+	display:grid;
+	grid-template-columns:var(--Searchbar-Field-Width) var(--Searchbar-Button-Width);
+	width:calc(var(--Searchbar-Field-Width) + var(--Searchbar-Button-Width) + var(--Searchbar-Spacing));
+	grid-gap:0 var(--Searchbar-Spacing);
+	text-align:left;
+}
+
+/* <input> */
+.searchbar-field {
+	margin:0;
+	width:var(--Searchbar-Field-Width);
+	padding:var(--Searchbar-Field-Padding);
+	background:var(--Searchbar-Field-Background);
+	outline:none;
+	border:1px solid var(--Searchbar-Field-Border);
+	border-radius:var(--Searchbar-Field-Corner-Rounding);
+	font-family:var(--Searchbar-Field-Font);
+	font-size:var(--Searchbar-Field-Font-Size);
+	color:var(--Searchbar-Field-Typing-Color);
+	line-height:100%;
+}
+
+.searchbar-field::placeholder {
+	color:var(--Searchbar-Field-Placeholder-Color)
+}
+
+/* <button> */
+.searchbar-button button {
+	display:block;
+	width:100%;
+	height:100%;
+	background:var(--Searchbar-Button-Background);
+	border-radius:var(--Searchbar-Button-Corner-Rounding);
+	font-family:var(--Searchbar-Button-Font);
+	font-size:var(--Searchbar-Button-Font-Size);
+	text-transform:uppercase;
+	letter-spacing:.3px;
+	border:1px solid var(--Searchbar-Button-Border);
+	color:var(--Searchbar-Button-Text-Color);
+	cursor:pointer;
+}
+
+.search-suggestions-wrapper {
+	position:absolute;
+	visibility:collapse;
+}
+
+.wrp-open {
+	position:relative;
+}
+
+.search-suggestions {
+	margin-top:var(--Search-Suggestion-Box-Top-Gap);
+	width:var(--Searchbar-Field-Width);
+	background:var(--Search-Suggestion-Box-Background);
+	border-radius:var(--Search-Suggestion-Box-Corner-Rounding);
+	box-shadow:2px 4px 25px 0 rgba(0,0,0,0.07);
+	border:1px solid var(--Search-Suggestion-Box-Border);
+	overflow:hidden;
+}
+
+.searchblock[no-shadows] .search-suggestions {
+	box-shadow:none!important;
+}
+
+.search-suggestions a {
+	display:block;
+	margin:0 var(--Search-Suggestion-Box-Inner-Margin);
+	width:calc(100% - (var(--Search-Suggestion-Box-Inner-Margin) * 2));
+	padding:var(--Search-Suggestion-Items-Padding);
+	border-radius:var(--Search-Suggestion-Items-Corner-Rounding);
+	font-family:var(--Search-Suggestions-Font);
+	font-size:var(--Search-Suggestions-Font-Size);
+	color:var(--Search-Suggestions-Text-Color);
+	transition:all var(--Search-Suggestions-HOVER-Speed) ease-in-out;
+	text-align:left;
+}
+
+.search-suggestions a:first-child {
+	margin-top:var(--Search-Suggestion-Box-Inner-Margin);
+}
+
+.search-suggestions a:last-child {
+	margin-bottom:var(--Search-Suggestion-Box-Inner-Margin);
+}
+
+.search-suggestions:not(.disb-hov) a:hover,
+.search-suggestions a.hov {
+	background:var(--Search-Suggestions-HOVER-Background);
+	color:var(--Search-Suggestions-HOVER-Text-Color);
+}
+
+.search-suggestions.expand {
+	height:var(--Search-Suggestions-Height)!important;	
+}
+
+.search-suggestions, .search-suggestions.expand {
+	transition:height var(--Search-Suggestions-Expand-Speed) ease-in-out;
+}
+
+.searchblock a {
+	text-decoration:none;
+}
