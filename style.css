@@ -8,7 +8,7 @@
 ----------------------------------------------*/
 
 /* box-sizing:border-box */
-.searchbar-field, .searchbar-button button, .search-suggestions a {
+.searchbar-field, .searchbar-button button, .search-suggestions, .search-suggestions a {
 	box-sizing:border-box;
 }
 
