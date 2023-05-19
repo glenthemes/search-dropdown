@@ -138,6 +138,7 @@ srchField.addEventListener("focus", () => {
 });
 
 // open the box [2/2]
+// and add stuff to it to indicate that it's opened
 function openSrchBox(){
 	if(!srchField.matches(".is-open")){
 		srchSgstnsWrap.style.display = "block";
