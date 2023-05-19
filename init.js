@@ -69,7 +69,6 @@ let lpyxg = setInterval(() => {
 
 function hrqnc(){
 	if(srchSgstns.offsetHeight > 0){
-		clearInterval(lpyxg);
 		srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
 		// console.log(srchSgstns.offsetHeight)
 	}
@@ -86,8 +85,7 @@ window.addEventListener("resize", () => {
 let qfryi;
 if(typeof(Event) === "function"){
     qfryi = new Event("resize");
-} else {
-	/* IE */
+} else { /* IE */
     qfryi = document.createEvent("Event");
     qfryi.initEvent("resize", true, true);
 }
