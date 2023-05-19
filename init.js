@@ -58,7 +58,6 @@ let lpyxg = setInterval(() => {
 		if(srchSgstns.offsetHeight > 0){
 			clearInterval(lpyxg);
 			srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
-			// console.log(srchSgstns.offsetHeight)
 		}
 	}
 },0);
@@ -66,17 +65,8 @@ let lpyxg = setInterval(() => {
 function hrqnc(){
 	if(srchSgstns.offsetHeight > 0){
 		srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
-		// console.log(srchSgstns.offsetHeight)
 	}
 }
-
-window.addEventListener("load", () => {
-	hrqnc();
-})
-
-window.addEventListener("resize", () => {
-	hrqnc();
-})
 
 /*----- KEEP TRACK OF TYPING IN <INPUT> -----*/
 let srchFieldVal = "";
@@ -272,7 +262,7 @@ document.addEventListener("keydown", (e) => {
 							curOpt.previousElementSibling.classList.add("hov");
 							srchField.value = curOpt.previousElementSibling.textContent;
 
-						}//end: if .next() exists
+						}//end: if .prev() exists
 						
 						// if reached the bottom,
 						// highlight the top (first)
@@ -313,4 +303,4 @@ srchForm.addEventListener("submit", (e) => {
 	}
 })
 
-});//end DOMcontentloaded
+});//end DOMContentloaded
