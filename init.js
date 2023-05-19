@@ -69,6 +69,10 @@ function hrqnc(){
 		// console.log(srchSgstns.offsetHeight)
 	}
 }
+	
+window.addEventListener("load", () => {
+	hrqnc()
+})
 
 /*----- KEEP TRACK OF TYPING IN <INPUT> -----*/
 let srchFieldVal = "";
