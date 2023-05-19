@@ -9,14 +9,10 @@
 
 document.addEventListener("DOMContentLoaded",() => {
 
-/*---------------------*/
-
 let llvlq = Date.now();
 let nvtwq = 3000;
 
 let srchSpeed = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--Search-Suggestions-Expand-Speed").trim());
-
-/*---------------------*/
 
 // <form>
 let srchForm = document.querySelector(".searchblock");
