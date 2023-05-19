@@ -78,16 +78,6 @@ window.addEventListener("resize", () => {
 	hrqnc();
 })
 
-let qfryi;
-if(typeof(Event) === "function"){
-    qfryi = new Event("resize");
-} else { /* IE */
-    qfryi = document.createEvent("Event");
-    qfryi.initEvent("resize", true, true);
-}
-
-window.dispatchEvent(qfryi);
-
 /*----- KEEP TRACK OF TYPING IN <INPUT> -----*/
 let srchFieldVal = "";
 srchField.addEventListener("keyup", (e) => {
