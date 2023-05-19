@@ -58,6 +58,7 @@ let lpyxg = setInterval(() => {
 		if(srchSgstns.offsetHeight > 0){
 			clearInterval(lpyxg);
 			srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
+			// console.log(srchSgstns.offsetHeight)
 		}
 	}
 },0);
@@ -65,6 +66,7 @@ let lpyxg = setInterval(() => {
 function hrqnc(){
 	if(srchSgstns.offsetHeight > 0){
 		srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
+		// console.log(srchSgstns.offsetHeight)
 	}
 }
 
@@ -293,7 +295,7 @@ srchForm.addEventListener("submit", (e) => {
 		})
 		
 		e.preventDefault();
-		//alert(urlsArr[gin])
+		//console.log(urlsArr[gin])
 		window.location.href = urlsArr[gin];
 	}
 	
