@@ -25,7 +25,7 @@ This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&
 ---
 
 #### Demo:
-:mag:&ensp;[jsfiddle.net/glenthemes/p23sfx1a/show](https://jsfiddle.net/glenthemes/p23sfx1a/show)  
+:mag:&ensp;[search-dropdown.gitlab.io/i/demo](https://search-dropdown.gitlab.io/i/demo)  
 
 <img alt="A GIF screenshot of OP demonstrating this widget by typing 'hello world :)' into the searchbar. When the searchbar is focused, a suggestions box appears with a slide-down animation. They then hover over the provided suggestions, namingly #photography, #art shares, #fav games, and #cat tag, each with a corresponding emoji preceding it. As the mouseover activates, the text in the searchbar changes to match that suggestion. OP moves the mouse away from the suggestions box, and the searchbar text reverts back to what they were typing before. OP clicks away from the search entirely, and the suggestion box hides by sliding up." src="https://64.media.tumblr.com/d338a409dbe976e1200eb7a0711ec8ec/99ce4dfdb1f0808c-f7/s1280x1920/c461bb5311ac610b8914fae723b194d8f3ef8fdf.gif" width="600">  
 
@@ -40,12 +40,12 @@ Before installing the searchbar, you need to make sure that both your blog and y
    (replace `BLOG-NAME` with your blog's username, e.g. **devsmaycry**)
 2. In "**Custom Theme**", make sure this option is turned ON (blue):  
    
-   <img alt="A screenshot of the Tumblr settings page for your blog. 'Custom Theme' is written in bold on the left, and 'Enable custom theme' appears as a toggle option on the right. It is currently toggled on, with the color blue. Underneath it, the description reads 'Create a separate theme for your blog. Change the layout. Edit the code. Make an entirely new theme. It's up to you.'" src="https://cdn.discordapp.com/attachments/382037367940448256/1085085974452768828/image.png">
+   <img alt="A screenshot of the Tumblr settings page for your blog. 'Custom Theme' is written in bold on the left, and 'Enable custom theme' appears as a toggle option on the right. It is currently toggled on, with the color blue. Underneath it, the description reads 'Create a separate theme for your blog. Change the layout. Edit the code. Make an entirely new theme. It's up to you.'" src="https://github.com/ht-devx/ht-devx.github.io/assets/162752471/55fdd3fe-ba5e-4a8d-bdde-9a5b4e205260">
    
    
-3. Scroll down to **Visibility**. Make sure all of its options are turned OFF (gray):  
+3. Scroll down to **Visibility**. Make sure all of the following circled options are turned OFF (gray):  
    
-   <img alt="A screenshot of the Tumblr settings page for your blog. 'Visibility; is written in bold on the left. There are two toggle options on the right, both switched off, their colors are gray. The first toggle reads: 'Hide BLOG-NAME from people without an account. This blog will only be viewable to people that are logged into Tumblr and its submission form will only be available on mobile apps.' The second toggle reads: 'It'll be hidden from Tumblr searches, and from external search engines like Google or Yahoo.'" src="https://cdn.discordapp.com/attachments/382037367940448256/1085087300574265355/image.png">
+   <img alt="A screenshot of the Tumblr settings page for your blog. 'Visibility; is written in bold on the left. There are three toggle options with labels on the right. The first toggle is circled, is turned off and gray, and reads: 'Hide BLOG-NAME from people without an account. This blog will only be viewable to people that are logged into Tumblr and its submission form will only be available on mobile apps.' The second toggle is not circled, and reads: 'Discourage external searching of BLOG-NAME. It'll be hidden from Tumblr searches, and from external search engines like Google or Yahoo.' The third toggle is circled, is turned off and gray, and reads: 'Exclude BLOG-NAME from Tumblr search and recommendations. Your blog and posts will not be recommended to others, will be excluded from Tumblr search results, and the in-blog search function will be disabled for everyone, including you.'" src="https://static.tumblr.com/gtjt4bo/Q5Tsextyt/tumblr_visibility_circled.png">
 
 ---
 
