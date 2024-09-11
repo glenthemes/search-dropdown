@@ -147,9 +147,9 @@ Paste the following between `<body>` and `</body>`:
 You can edit the appearance within this huge list called `:root` (from the code you just copied above):
 ```css
 :root {
-	/*--
-		customize your appearance options here
-	--*/
+    /*--
+        customize your appearance options here
+    --*/
 }
 ```
 Additionally, I've added this temporary placement for the searchbar (fixed at top left of your screen).  
@@ -176,12 +176,12 @@ From the huge chunk of code you pasted in [Step 1](#step-1-essentials), the actu
 Scroll a bit down and you will find:
 ```html
 <div class="search-suggestions-wrapper" fixed>
-	<div class="search-suggestions">
-		<a href="/tagged/photography">📸 #photography</a>
-		<a href="/tagged/art">🎨 #art shares</a>
-		<a href="/tagged/games">🎮 #fav games</a>
-		<a href="/tagged/cats">🐈 #cat tag</a>
-	</div>
+    <div class="search-suggestions">
+        <a href="/tagged/photography">📸 #photography</a>
+        <a href="/tagged/art">🎨 #art shares</a>
+        <a href="/tagged/games">🎮 #fav games</a>
+        <a href="/tagged/cats">🐈 #cat tag</a>
+    </div>
 </div>
 ```
 Each suggestion is represented by this line of code:
@@ -225,8 +225,8 @@ And remove the `fixed` keyword, such that:
 ### Terms of use:
 
 - Whilst you're free to customize it as much as you want:
-	- Please do not remove the credit.
-	- **If you're a theme maker,** you're welcome to use this in your own theme, just make sure to include a link to [this repository page](https://git.new/glen-searchbar) or [my Tumblr post](https://glenthemes.tumblr.com/post/163630663674).
+    - Please do not remove the credit.
+    - **If you're a theme maker,** you're welcome to use this in your own theme, just make sure to include a link to [this repository page](https://git.new/glen-searchbar) or [my Tumblr post](https://glenthemes.tumblr.com/post/163630663674).
 
 ---
 

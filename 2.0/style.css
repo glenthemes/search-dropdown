@@ -7,45 +7,21 @@
     
 ----------------------------------------------*/
 
-/* google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,500;1,500&family=Golos+Text:wght@400..900&family=Public+Sans:ital,wght@0,500;1,500&display=swap");
-
 /* box-sizing:border-box */
 .searchbar-field, .searchbar-button button, .search-suggestions, .search-suggestions a {
 	box-sizing:border-box;
 }
 
-/*======== FORM ========*/
+/* <form> */
 .searchblock {
-  /* grid layout defaults, can be overridden */
-  --Searchbar-Field-Width:auto;
-  --Searchbar-Button-Width:min-content;
-  
-  /* shadow defaults, can be overridden */
-	--Search-Shadow-X-Position:0px;
-	--Search-Shadow-Y-Position:4px;
-  --Search-Shadow-Size:15px;
-  --Search-Shadow-Color-RGB:0,0,0;
-  
-  display:grid; 
-  grid-template-columns:auto min-content;
-  grid-gap:0 var(--Searchbar-Spacing);
-  grid-template-areas: 
-    "input btn"
-    "dd .";
-  
-  max-width:var(--Search-Max-Width);
-  text-align:left;
-  
-  filter:drop-shadow(var(--Search-Shadow-X-Position) var(--Search-Shadow-Y-Position) var(--Search-Shadow-Size) rgba(var(--Search-Shadow-Color-RGB),var(--Search-Shadow-Strength)));
-  
+	display:grid;
+	grid-template-columns:var(--Searchbar-Field-Width) var(--Searchbar-Button-Width);
+	width:calc(var(--Searchbar-Field-Width) + var(--Searchbar-Button-Width) + var(--Searchbar-Spacing));
+	grid-gap:0 var(--Searchbar-Spacing);
+	text-align:left;
 }
 
-.searchblock[no-shadows]{
-	filter:drop-shadow(0 0 0 transparent);
-}
-
-/*======== TYPING FIELD ========*/
+/* <input> */
 .searchbar-field {
 	margin:0;
 	width:var(--Searchbar-Field-Width);
@@ -64,16 +40,11 @@
 	color:var(--Searchbar-Field-Placeholder-Color)
 }
 
-/*======== SUBMIT BTN ========*/
-.searchbar-button {
-  width:var(--Searchbar-Button-Width);
-}
-
+/* <button> */
 .searchbar-button button {
 	display:block;
 	width:100%;
 	height:100%;
-  padding:var(--Searchbar-Button-Padding);
 	background:var(--Searchbar-Button-Background);
 	border-radius:var(--Searchbar-Button-Corner-Rounding);
 	font-family:var(--Searchbar-Button-Font);
@@ -85,19 +56,11 @@
 	cursor:pointer;
 }
 
-/*======== SEARCH SUGGESTIONS DD ========*/
 .search-suggestions-wrapper {
 	display:grid;
-  grid-template-rows:0fr;
-  grid-area:dd;
-  overflow:hidden;
-  transition:grid-template-rows var(--Search-Suggestions-Expand-Speed) ease-in-out;
-}
-
-.search-suggestions-wrapper[fixed]{
-  position:absolute;
-  top:100%;
-  width:100%;
+    grid-template-rows:0fr;
+    overflow:hidden;
+    transition:grid-template-rows var(--Search-Suggestions-Expand-Speed) ease-in-out;
 }
 
 .wrp-open {
@@ -106,8 +69,8 @@
 
 .search-suggestions-inner {
 	min-height:0;
-  visibility:hidden;
-  transition:visibility var(--Search-Suggestions-Expand-Speed) ease-in-out;
+    visibility:hidden;
+    transition:visibility var(--Search-Suggestions-Expand-Speed) ease-in-out;
 }
 
 .wrp-open .search-suggestions-inner {
@@ -115,7 +78,7 @@
 }
 
 .search-suggestions:not(.search-suggestions-inner .search-suggestions){
-  display:none;
+    display:none;
 }
 
 .search-suggestions {
@@ -123,8 +86,13 @@
 	width:var(--Searchbar-Field-Width);
 	background:var(--Search-Suggestion-Box-Background);
 	border-radius:var(--Search-Suggestion-Box-Corner-Rounding);
+	box-shadow:2px 4px 25px 0 rgba(0,0,0,0.07);
 	border:1px solid var(--Search-Suggestion-Box-Border);
 	overflow:hidden;
+}
+
+.searchblock[no-shadows] .search-suggestions {
+	box-shadow:none!important;
 }
 
 .search-suggestions a {

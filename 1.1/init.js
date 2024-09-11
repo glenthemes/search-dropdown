@@ -7,8 +7,13 @@
     
 ----------------------------------------------*/
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",() => {
 
+    /*---------------------*/
+    
+    let llvlq = Date.now();
+    let nvtwq = 3000;
+    
     let srchSpeed = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--Search-Suggestions-Expand-Speed").trim());
     
     /*---------------------*/
@@ -19,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // <input>
     let srchField = document.querySelector(".searchbar-field");
     
+    // <button>
+    let srchBtn = document.querySelector(".searchbar-button button");
+    
     // suggestions box wrapper
     let srchSgstnsWrap = document.querySelector(".search-suggestions-wrapper");
     
@@ -28,15 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // the suggestions
     let srchItems = document.querySelectorAll(".search-suggestions a");
     
-    if(srchForm && srchField && srchSgstnsWrap && srchSgstns && srchItems){
-        
-        // wrap search suggestions
-        if(!srchSgstns.closest(".search-suggestions-inner")){
-            let n = document.createElement("div");
-            n.classList.add("search-suggestions-inner");
-            srchSgstns.before(n);
-            n.append(srchSgstns)
-        }
+    if(srchForm && srchField && srchBtn && srchSgstnsWrap && srchSgstns && srchItems){
+            // submit btn
+        let srchSubmit = srchForm.querySelector("button[type='submit']")
     
         /*----- KEEP TRACK OF SUGGESTION TEXT & URLS -----*/
         let txtsArr = [];
@@ -52,6 +54,49 @@ document.addEventListener("DOMContentLoaded", () => {
             i += 1;
             wymqj.setAttribute("index",i);
         })
+    
+        /*----- SEARCH SUGGESTIONS HEIGHT -----*/
+        let lpyxg = setInterval(() => {
+            if(Date.now() - llvlq > nvtwq){
+                clearInterval(lpyxg);
+            } else {
+                if(!srchSgstns.matches(".expand")){
+                    if(srchSgstns.offsetHeight > 0){
+                        clearInterval(lpyxg);
+                        srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
+                        // console.log(srchSgstns.offsetHeight)
+                    }
+                }		
+            }
+        },0);
+    
+        function hrqnc(){
+            if(!srchSgstns.matches(".expand")){
+                if(srchSgstns.offsetHeight > 0){
+                    srchSgstns.style.setProperty("--Search-Suggestions-Height",srchSgstns.offsetHeight + "px");
+                    // console.log(srchSgstns.offsetHeight)
+                }
+            }	
+        }
+    
+        window.addEventListener("load", () => {
+            hrqnc();
+        })
+    
+        window.addEventListener("resize", () => {
+            hrqnc();
+        })
+    
+        let qfryi;
+        if(typeof(Event) === "function"){
+            qfryi = new Event("resize");
+        } else {
+            /* IE */
+            qfryi = document.createEvent("Event");
+            qfryi.initEvent("resize", true, true);
+        }
+    
+        window.dispatchEvent(qfryi);
     
         /*----- KEEP TRACK OF TYPING IN <INPUT> -----*/
         let srchFieldVal = "";
@@ -119,11 +164,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // open the box [2/2]
         function openSrchBox(){
             if(!srchField.matches(".is-open")){
-                srchField.classList.add("opening");
-                srchSgstnsWrap.classList.add("wrp-open");	
+                srchSgstnsWrap.style.display = "block";
+                srchSgstnsWrap.style.visibility = "visible";
+                srchSgstnsWrap.classList.add("wrp-open");
+    
+                srchSgstns.style.height = 0;
+                setTimeout(() => {
+                    srchSgstns.classList.add("expand")
+                },0);
+    
                 setTimeout(() => {
                     srchField.classList.add("is-open");
-                    srchField.classList.remove("opening");
                 },srchSpeed)
             }
         }
@@ -145,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // close the box [2/2]
         function closeSrchBox(){
-            if(srchField.matches(".is-open:not(.opening)")){
+            if(srchField.matches(".is-open")){
                 srchItems.forEach(eachA => {
                     if(eachA.matches(".hov")){
                         eachA.classList.remove("hov")
@@ -153,12 +204,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
     
                 srchField.value = srchFieldVal;
-                srchSgstnsWrap.classList.remove("wrp-open");
+                srchSgstns.classList.remove("expand");
     
                 setTimeout(() => {
-                    srchSgstns.classList.remove("z-entered");
-                    srchSgstns.classList.remove("disb-hov");
+                    srchSgstns.style.height = 0;
+                    srchSgstnsWrap.style.display = "";
+                    srchSgstnsWrap.style.visibility = "";
                     srchField.classList.remove("is-open");
+    
+                    srchSgstns.classList.remove("z-entered");
+                    srchSgstns.classList.remove("disb-hov")
                 },srchSpeed)
             }
         }
@@ -278,5 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     }//end: if things exist
-    });//end DOMcontentloaded
     
+    
+    
+    });//end DOMcontentloaded

@@ -1,36 +1,42 @@
-### :mag:&ensp;searchbar with custom search suggestions
+### searchbar with custom search suggestions
+
+##### Table of Contents:
+- [About](#about)
+- [Demo](#demo)
+- [How it works](#how-it-works)
+- [Enable tumblr settings](#tumblr-settings)
+- Installation instructions:
+	- [Step 1 – how to download](#step-1-essentials)
+	- [Step 2 - style appearance](#step-2-styling)
+	- [Step 3 - add your own suggestions](#step-3-use-your-own-suggestions)
+- [Further customization](#further-customization)
+- [Usage notes](#usage-notes)
+- [Need help?](#issues-troubleshooting)
+
+This searchbar was initially tailored for T&#x200B;u&#x200B;m&#x200B;b&#x200B;l&#x200B;r, so the `<input>`'s `value` is `{SearchQuery}`, which is [a "block" unique to 𝗧𝘂𝗺𝗯𝗹𝗿](https://www.tumblr.com/docs/en/custom_themes#search). However, you're free to use this for your own site or projects. Just remember that the `<form>`'s `action` URL will vary depending on what platform you're using.
 
 ---
+
+#### About:
 
 **Description:** a searchbar widget with custom suggestions in dropdown format.  
 **Dependencies:** none (written in pure JS)  
 **Accessibility:** :white_check_mark: tabbable, :white_check_mark: supports arrow keys  
 **Requirements:** basic&hairsp;&ndash;&hairsp;intermediate HTML/CSS knowledge  
-**Author:** HT (@&#x200A;glenthemes)
+**Author:** HT (@&#x200A;glenthemes)  
+**Last updated:** 2024-04-06
+
+:warning:&ensp;A new version is now available! Please head over to:  
+[git.new/glen-searchbar](https://git.new/glen-searchbar)
 
 ---
 
-#### Table of Contents:
-- [About](#searchbar-with-custom-search-suggestions)
-- [Demo&#x2009;/&#x2009;Preview](#demo)
-- [How it works](#how-it-works)
-- [Tumblr or elsewhere](#tumblr-or-elsewhere)
-- [Enable Tumblr settings](#tumblr-settings)
-- [How to install](#how-to-install)
-- [Further customization](#further-customization)
-- [Usage notes](#usage-notes)
-- [Need help?](#issues-troubleshooting)
-
----
-
-### Demo:
+#### Demo:
 :mag:&ensp;[search-dropdown.gitlab.io/i/demo](https://search-dropdown.gitlab.io/i/demo)  
 
 <img alt="A GIF screenshot of OP demonstrating this widget by typing 'hello world :)' into the searchbar. When the searchbar is focused, a suggestions box appears with a slide-down animation. They then hover over the provided suggestions, namingly #photography, #art shares, #fav games, and #cat tag, each with a corresponding emoji preceding it. As the mouseover activates, the text in the searchbar changes to match that suggestion. OP moves the mouse away from the suggestions box, and the searchbar text reverts back to what they were typing before. OP clicks away from the search entirely, and the suggestion box hides by sliding up." src="https://search-dropdown.gitlab.io/i/screenshots/preview.gif" width="600">  
 
----
-
-### How it works:
+#### How it works:
 > Users can type their custom search queries into the search input field. When they press <kbd>Enter</kbd>, it will execute the search function specified by the `<form>`, in this case, `/search`. Users also have the option to pick from one of the suggestions you've provided. These suggestions are URLs you can set yourself. For example, you could promote your `#cat tag`, or a `quote` keyword. If the user decides to choose from your suggestions, then pressing <kbd>Enter</kbd> will take them to that URL, instead of executing the query in the searchbar.
 <br><br>
 Your suggestions do not have to be `/tagged/some_keyword`, they can be any URL you want.
@@ -39,16 +45,10 @@ Users can use <kbd>up</kbd> or <kbd>down</kbd> arrow keys on their keyboard to n
 
 ---
 
-### Tumblr or elsewhere:
+#### Tumblr Settings:
+<small>( *Skip this part if you are not using it on 𝗧𝘂𝗺𝗯𝗹𝗿* )</small>
 
-This searchbar was initially tailored for T&#x2060;u&#x2060;m&#x2060;b&#x2060;l&#x2060;r, so the `<input>`'s `value` is `{SearchQuery}`, which is [a "block" unique to T&#x2060;u&#x2060;m&#x2060;b&#x2060;l&#x2060;r](https://www.tumblr.com/docs/en/custom_themes#search). However, you are welcome to use this searchbar on other websites as well. Just remember that the `<form>`'s `action` URL will vary depending on what platform you're using.
-
----
-
-### Tumblr Settings:
-<small>( *Skip this part if you are not using it on T&#x2060;u&#x2060;m&#x2060;b&#x2060;l&#x2060;r* )</small>
-
-Before installing the searchbar, you need to **make sure that both your blog and your theme are visible**, otherwise the search functionality will not work.
+Before installing the searchbar, you need to make sure that both your blog and your theme are visible, otherwise the search functionality will not work.
 
 1. Go to your blog's settings page:
    `https://www.tumblr.com/settings/blog/BLOG-NAME`  
@@ -63,28 +63,28 @@ Before installing the searchbar, you need to **make sure that both your blog and
 
 ---
 
-### How to install:
-
 #### Step 1 &mdash; Essentials:
-
 Paste the following between `<body>` and `</body>`:  
 (Or paste it where you want it to be located, e.g. within your sidebar).
 ```html
-<!--✻✻✻✻✻✻  SEARCHBAR + CUSTOM SUGGESTIONS by @glenthemes  ✻✻✻✻✻✻-->
-<link href="https://search-dropdown.gitlab.io/i/2.1/style.css" rel="stylesheet">
-<script src="https://search-dropdown.gitlab.io/i/2.1/init.min.js"></script>
+<!--✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻
+    
+    SEARCHBAR WITH CUSTOM SUGGESTIONS
+    - author: @glenthemes
+    - github.com/glenthemes/search-dropdown
+    
+✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻-->
+<link href="https://search-dropdown.gitlab.io/i/style.css" rel="stylesheet">
+<script src="https://search-dropdown.gitlab.io/i/init.js"></script>
 
-<style searchbar>
+<style>
 :root {
-	/*----- GENERAL SETTINGS -----*/
-	--Search-Max-Width:300px;
-	--Search-Shadow-Strength:10%;
-	
 	/*----- SEARCHBAR -----*/
+	--Searchbar-Field-Width:215px;
 	--Searchbar-Field-Border:#424242;
-	--Searchbar-Field-Corner-Rounding:3px;
 	--Searchbar-Field-Background:#17191b;
 	--Searchbar-Field-Padding:10px;
+	--Searchbar-Field-Corner-Rounding:3px;
 	--Searchbar-Field-Font:"Golos Text";
 	--Searchbar-Field-Font-Size:12px;
 	--Searchbar-Field-Placeholder-Color:#a5a5a5;
@@ -92,10 +92,10 @@ Paste the following between `<body>` and `</body>`:
 	--Searchbar-Spacing:9px;
 	
 	/*----- SEARCHBAR BUTTON -----*/
+	--Searchbar-Button-Width:69px;
 	--Searchbar-Button-Border:#2c2e3a;
-	--Searchbar-Button-Corner-Rounding:3px;
 	--Searchbar-Button-Background:#2c2e3a;
-	--Searchbar-Button-Padding:10px;
+	--Searchbar-Button-Corner-Rounding:3px;
 	--Searchbar-Button-Font:"Figtree";
 	--Searchbar-Button-Font-Size:10.5px;
 	--Searchbar-Button-Text-Color:#e8e7ec;
@@ -103,12 +103,12 @@ Paste the following between `<body>` and `</body>`:
 	/*----- SEARCH SUGGESTIONS -----*/
 	--Search-Suggestion-Box-Top-Gap:10px;
 	--Search-Suggestion-Box-Inner-Margin:10px;
-	--Search-Suggestion-Box-Border:#2c2e3a;
-	--Search-Suggestion-Box-Corner-Rounding:10px;
 	--Search-Suggestion-Box-Background:#21232c;
+	--Search-Suggestion-Box-Corner-Rounding:10px;
+	--Search-Suggestion-Box-Border:#2c2e3a;
 	
-	--Search-Suggestion-Items-Corner-Rounding:5px;
 	--Search-Suggestion-Items-Padding:10px;
+	--Search-Suggestion-Items-Corner-Rounding:5px;
 	
 	--Search-Suggestions-Font:"Golos Text";
 	--Search-Suggestions-Font-Size:12px;
@@ -118,8 +118,21 @@ Paste the following between `<body>` and `</body>`:
 	--Search-Suggestions-HOVER-Background:#5b6ddb;
 	--Search-Suggestions-HOVER-Text-Color:#eee;
 	--Search-Suggestions-HOVER-Speed:0.25s;
-} /* do not delete this bracket */
+}
+
+/* temporary searchbar placement */
+.searchblock {
+	position:fixed;
+	top:0;
+	margin-top:25px;
+	left:0;
+	margin-left:25px;
+	z-index:69;
+}
 </style>
+
+<!-- google fonts for the searchbar -->
+<link href="https://fonts.googleapis.com/css?family=Public+Sans:500|Golos+Text|Figtree:500" rel="stylesheet">
 
 <!--✻✻✻✻✻✻ START search ✻✻✻✻✻✻-->
 <form class="searchblock" action="/search" method="get">
@@ -129,13 +142,14 @@ Paste the following between `<body>` and `</body>`:
 	<div class="searchbar-button">
 		<button type="submit">Search</button>
 	</div>
+	
 
-	<div class="search-suggestions-wrapper" fixed>
+	<div class="search-suggestions-wrapper">
 		<div class="search-suggestions">
-			<a href="/tagged/photography">📸 #photography</a>
-			<a href="/tagged/art">🎨 #art shares</a>
-			<a href="/tagged/games">🎮 #fav games</a>
-			<a href="/tagged/cats">🐈 #cat tag</a>
+			<a href="/tagged/photography">📸 #photography</a>
+			<a href="/tagged/art">🎨 #art shares</a>
+			<a href="/tagged/games">🎮 #fav games</a>
+			<a href="/tagged/cats">🐈 #cat tag</a>
 		</div>
 	</div>
 </form>
@@ -147,13 +161,12 @@ Paste the following between `<body>` and `</body>`:
 You can edit the appearance within this huge list called `:root` (from the code you just copied above):
 ```css
 :root {
-	/*--
-		customize your appearance options here
-	--*/
+    /*--
+        customize your appearance options here
+    --*/
 }
 ```
-Additionally, I've added this temporary placement for the searchbar (fixed at top left of your screen).  
-Feel free to remove this block of code and adjust it to fit your theme.
+Additionally, I've added this temporary placement for the searchbar (fixed at top left of your screen). Feel free to remove this block of code, or adjust it to fit your theme.
 ```css
 /* temporary searchbar placement */
 .searchblock {
@@ -165,81 +178,63 @@ Feel free to remove this block of code and adjust it to fit your theme.
 	z-index:69;
 }
 ```
+<details><summary>Click for an explanation of what the above code does.</summary>
+
+| Line of code | What it Does |
+| ------ | ------ |
+| `position:fixed;` | Fixes the searchbar in its place so that it does not scroll with the rest of the page |
+| `top:0;` | anchors the searchbar at the top of the screen |
+| `margin-top:25px;` | Specifies the gap from the top of the screen (we used `top:0;` to anchor it at the top) |
+| `left:0;` | Anchors the searchbar at the left of the screen |
+| `margin-left:25px;` | Specifies the gap from the left of the screen (we used `left:0;` to anchor it at the left) |
+| `z-index:69;` | Indicates if the searchbar should be above other elements, or under it. Increase this number to bring it forward. Note that `z-index` generally only works if it has `postion:fixed;` `position:absolute;` or `position:relative;` |
+</details>
+
+
+
 
 ---
 
 #### Step 3 &mdash; use your own suggestions:
-From the huge chunk of code you pasted in [Step 1](#step-1-essentials), the actual **content** of the searchbar starts at:
+From the huge chunk of code you pasted in [Step 1](#step-1-essentials), the actual content of the searchbar starts at:
 ```html
 <!--✻✻✻✻✻✻ START search ✻✻✻✻✻✻-->
 ```
 Scroll a bit down and you will find:
 ```html
-<div class="search-suggestions-wrapper" fixed>
-	<div class="search-suggestions">
-		<a href="/tagged/photography">📸 #photography</a>
-		<a href="/tagged/art">🎨 #art shares</a>
-		<a href="/tagged/games">🎮 #fav games</a>
-		<a href="/tagged/cats">🐈 #cat tag</a>
-	</div>
+<div class="search-suggestions-wrapper">
+    <div class="search-suggestions">
+        <a href="/tagged/photography">📸 #photography</a>
+        <a href="/tagged/art">🎨 #art shares</a>
+        <a href="/tagged/games">🎮 #fav games</a>
+        <a href="/tagged/cats">🐈 #cat tag</a>
+    </div>
 </div>
 ```
 Each suggestion is represented by this line of code:
 ```html
 <a href="SUGGESTION_URL">SUGGESTION TEXT</a>
 ```
-| Part | Explanation |
-| ------ | ------ |
-| `SUGGESTION_URL`&ensp;&ensp;&ensp;&ensp; | Your suggestion's search URL (or tag URL), or anything you want linked. |
-| `SUGGESTION TEXT` | Your suggestion's displayed text. |
+In which `SUGGESTION_URL` is your suggestion's search (or tag) URL, and `SUGGESTION_TEXT` is the **display text** for that suggestion.
 
 ---
 
-### Further Customization:
-
-:green_square:&ensp; **Shadows:**
-
-Currently, there is a faint shadow around each element of the searchbar. If you don't want shadows, you can add `no-shadows` to the `form class="searchblock"` line before the closing pointy bracket (`>`), like this:
+#### Further Customization:
+If you don't want shadows around the suggestions box (this is more prominent if you choose to change your colors to a light palette), you can add `no-shadows` to the `form class="searchblock"` line (1st line), like this:
 ```html
-<form class="searchblock" (rest of the code as normal) no-shadows>
+<form class="searchblock" no-shadows [...rest of the code]
 ```
-
-:green_square:&ensp; **Dropdown behavior:**
-
-If your searchbar was placed near the bottom of the screen, there is a chance that the searchbar dropdown may not reveal all the suggestions as intended. To solve this, go to this line:
-```html
-<div class="search-suggestions-wrapper" fixed>
-```
-And remove the `fixed` keyword, such that:
-```html
-<div class="search-suggestions-wrapper">
-```
-
 ---
 
-### Usage notes:
-   
-- You can add **to** the class names, but don't remove any existing ones.
-- The searchbar can only be used once on your site. Multiple searchbars may crash your page!
-
-### Terms of use:
-
+#### Usage notes:
 - Whilst you're free to customize it as much as you want:
-	- Please do not remove the credit.
-	- **If you're a theme maker,** you're welcome to use this in your own theme, just make sure to include a link to [this repository page](https://git.new/glen-searchbar) or [my Tumblr post](https://glenthemes.tumblr.com/post/163630663674).
-
+    - please do not remove the credit.
+    - you can add *to* the class names but don't remove any existing ones.
+- It can only be used once. Multiple searchbars may crash your page!
 ---
 
-### Issues & Troubleshooting:
+#### Issues & Troubleshooting:
 
-If you have any questions, please contact me on Discord:  
-:computer:&ensp;[discord.gg/RcMKnwz](https://discord.gg/RcMKnwz)
+If you encounter any issues, please contact me on Discord: [discord.gg/RcMKnwz](https://discord.gg/RcMKnwz).
 
-Once you've joined, please read the **#server-rules** to get an idea of what to prepare when asking a question. You can send your questions in either the **#theme-help** or **#open-questions** channels, or via DMs if you prefer.
-
----
-
-#### Thank you〜 :love_letter:
-
-If you found this useful, please consider leaving me a tip!  
-:coffee:&ensp;[ko-fi.com/glenthemes](https://ko-fi.com/glenthemes)
+I will need your theme code (or project code), as well the link to your blog (or site). You can find the requirements in my `#server-rules` channel upon joining. You can use `#theme-help` to ask questions!
