@@ -6,7 +6,8 @@
 **Dependencies:** none (written in pure JS)  
 **Accessibility:** :white_check_mark: tabbable, :white_check_mark: supports arrow keys  
 **Requirements:** basic&hairsp;&ndash;&hairsp;intermediate HTML/CSS knowledge  
-**Author:** HT (@&#x200A;glenthemes)
+**Author:** HT (@&#x200A;glenthemes)  
+**Tumblr post:** [glenthemes.tumblr.com/post/163630663674](https://glenthemes.tumblr.com/post/163630663674)
 
 ---
 
@@ -19,7 +20,7 @@
 - [How to install](#how-to-install)
 - [Further customization](#further-customization)
 - [Usage notes](#usage-notes)
-- [Need help?](#issues--troubleshooting))
+- [Need help?](#issues--troubleshooting)
 
 ---
 
