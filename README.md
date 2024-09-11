@@ -11,6 +11,7 @@
 
 **Credits:**
 - `height:auto` animation via `grid-template-rows` by [Nelson Menezes](https://nemzes.net/posts/animating-height-auto).
+- Google Fonts: Figtree, Golos Text
 
 ---
 
