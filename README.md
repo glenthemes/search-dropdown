@@ -84,68 +84,78 @@ Paste the following between `<body>` and `</body>`:
 
 <style searchbar>
 :root {
-	/*----- GENERAL SETTINGS -----*/
-	--Search-Max-Width:300px;
-	--Search-Shadow-Strength:10%;
-	
-	/*----- SEARCHBAR -----*/
-	--Searchbar-Field-Border:#424242;
-	--Searchbar-Field-Corner-Rounding:3px;
-	--Searchbar-Field-Background:#17191b;
-	--Searchbar-Field-Padding:10px;
-	--Searchbar-Field-Font:"Golos Text";
-	--Searchbar-Field-Font-Size:12px;
-	--Searchbar-Field-Placeholder-Color:#a5a5a5;
-	--Searchbar-Field-Typing-Color:#e8e7ec;
-	--Searchbar-Spacing:9px;
-	
-	/*----- SEARCHBAR BUTTON -----*/
-	--Searchbar-Button-Border:#2c2e3a;
-	--Searchbar-Button-Corner-Rounding:3px;
-	--Searchbar-Button-Background:#2c2e3a;
-	--Searchbar-Button-Padding:10px;
-	--Searchbar-Button-Font:"Figtree";
-	--Searchbar-Button-Font-Size:10.5px;
-	--Searchbar-Button-Text-Color:#e8e7ec;
-	
-	/*----- SEARCH SUGGESTIONS -----*/
-	--Search-Suggestion-Box-Top-Gap:10px;
-	--Search-Suggestion-Box-Inner-Margin:10px;
-	--Search-Suggestion-Box-Border:#2c2e3a;
-	--Search-Suggestion-Box-Corner-Rounding:10px;
-	--Search-Suggestion-Box-Background:#21232c;
-	
-	--Search-Suggestion-Items-Corner-Rounding:5px;
-	--Search-Suggestion-Items-Padding:10px;
-	
-	--Search-Suggestions-Font:"Golos Text";
-	--Search-Suggestions-Font-Size:12px;
-	--Search-Suggestions-Text-Color:#e8e7ec;
-	--Search-Suggestions-Expand-Speed:420ms; /* ms only */
-	
-	--Search-Suggestions-HOVER-Background:#5b6ddb;
-	--Search-Suggestions-HOVER-Text-Color:#eee;
-	--Search-Suggestions-HOVER-Speed:0.25s;
+    /*----- GENERAL SETTINGS -----*/
+    --Search-Max-Width:300px;
+    --Search-Shadow-Strength:10%;
+    
+    /*----- SEARCHBAR -----*/
+    --Searchbar-Field-Border:#424242;
+    --Searchbar-Field-Corner-Rounding:3px;
+    --Searchbar-Field-Background:#17191b;
+    --Searchbar-Field-Padding:10px;
+    --Searchbar-Field-Font:"Golos Text";
+    --Searchbar-Field-Font-Size:12px;
+    --Searchbar-Field-Placeholder-Color:#a5a5a5;
+    --Searchbar-Field-Typing-Color:#e8e7ec;
+    --Searchbar-Spacing:9px;
+    
+    /*----- SEARCHBAR BUTTON -----*/
+    --Searchbar-Button-Border:#2c2e3a;
+    --Searchbar-Button-Corner-Rounding:3px;
+    --Searchbar-Button-Background:#2c2e3a;
+    --Searchbar-Button-Padding:10px;
+    --Searchbar-Button-Font:"Figtree";
+    --Searchbar-Button-Font-Size:10.5px;
+    --Searchbar-Button-Text-Color:#e8e7ec;
+    
+    /*----- SEARCH SUGGESTIONS -----*/
+    --Search-Suggestion-Box-Top-Gap:10px;
+    --Search-Suggestion-Box-Inner-Margin:10px;
+    --Search-Suggestion-Box-Border:#2c2e3a;
+    --Search-Suggestion-Box-Corner-Rounding:10px;
+    --Search-Suggestion-Box-Background:#21232c;
+    
+    --Search-Suggestion-Items-Corner-Rounding:5px;
+    --Search-Suggestion-Items-Padding:10px;
+    
+    --Search-Suggestions-Font:"Golos Text";
+    --Search-Suggestions-Font-Size:12px;
+    --Search-Suggestions-Text-Color:#e8e7ec;
+    --Search-Suggestions-Expand-Speed:420ms; /* ms only */
+    
+    --Search-Suggestions-HOVER-Background:#5b6ddb;
+    --Search-Suggestions-HOVER-Text-Color:#eee;
+    --Search-Suggestions-HOVER-Speed:0.25s;
 } /* do not delete this bracket */
+
+/* temporary searchbar placement */
+    .searchblock {
+    position:fixed;
+    top:0;
+    margin-top:25px;
+    left:0;
+    margin-left:25px;
+    z-index:69;
+}
 </style>
 
 <!--✻✻✻✻✻✻ START search ✻✻✻✻✻✻-->
 <form class="searchblock" action="/search" method="get">
-
-	<input class="searchbar-field" type="text" name="q" value="{SearchQuery}" placeholder="Looking for something?">
-	
-	<div class="searchbar-button">
-		<button type="submit">Search</button>
-	</div>
-
-	<div class="search-suggestions-wrapper" fixed>
-		<div class="search-suggestions">
-			<a href="/tagged/photography">📸 #photography</a>
-			<a href="/tagged/art">🎨 #art shares</a>
-			<a href="/tagged/games">🎮 #fav games</a>
-			<a href="/tagged/cats">🐈 #cat tag</a>
-		</div>
-	</div>
+    
+    <input class="searchbar-field" type="text" name="q" value="{SearchQuery}" placeholder="Looking for something?">
+    
+    <div class="searchbar-button">
+        <button type="submit">Search</button>
+    </div>
+    
+    <div class="search-suggestions-wrapper" fixed>
+        <div class="search-suggestions">
+            <a href="/tagged/photography">📸 #photography</a>
+            <a href="/tagged/art">🎨 #art shares</a>
+            <a href="/tagged/games">🎮 #fav games</a>
+            <a href="/tagged/cats">🐈 #cat tag</a>
+        </div>
+    </div>
 </form>
 <!--✻✻✻✻✻✻ END search ✻✻✻✻✻✻-->
 ```
@@ -155,9 +165,9 @@ Paste the following between `<body>` and `</body>`:
 You can edit the appearance within this huge list called `:root` (from the code you just copied above):
 ```css
 :root {
-	/*--
-		customize your appearance options here
-	--*/
+    /*--
+        customize your appearance options here
+    --*/
 }
 ```
 Additionally, I've added this temporary placement for the searchbar (fixed at top left of your screen).  
@@ -165,12 +175,12 @@ Feel free to remove this block of code and adjust it to fit your theme.
 ```css
 /* temporary searchbar placement */
 .searchblock {
-	position:fixed;
-	top:0;
-	margin-top:25px;
-	left:0;
-	margin-left:25px;
-	z-index:69;
+    position:fixed;
+    top:0;
+    margin-top:25px;
+    left:0;
+    margin-left:25px;
+    z-index:69;
 }
 ```
 
@@ -184,12 +194,12 @@ From the huge chunk of code you pasted in [Step 1](#step-1--essentials), the act
 Scroll a bit down and you will find:
 ```html
 <div class="search-suggestions-wrapper" fixed>
-	<div class="search-suggestions">
-		<a href="/tagged/photography">📸 #photography</a>
-		<a href="/tagged/art">🎨 #art shares</a>
-		<a href="/tagged/games">🎮 #fav games</a>
-		<a href="/tagged/cats">🐈 #cat tag</a>
-	</div>
+    <div class="search-suggestions">
+        <a href="/tagged/photography">📸 #photography</a>
+        <a href="/tagged/art">🎨 #art shares</a>
+        <a href="/tagged/games">🎮 #fav games</a>
+        <a href="/tagged/cats">🐈 #cat tag</a>
+    </div>
 </div>
 ```
 Each suggestion is represented by this line of code:
