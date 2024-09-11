@@ -233,6 +233,43 @@ And remove the `fixed` keyword, such that:
 <div class="search-suggestions-wrapper">
 ```
 
+:green_square:&ensp; **Additional styling for each part:**
+
+**The entire search:**
+```css
+.searchblock {
+    /* your extra styling here */
+}
+```
+
+**Searchbar:**
+```css
+.searchbar-field {
+    /* your extra styling here */
+}
+```
+
+**"Search" button:**
+```css
+.searchbar-button button {
+    /* your extra styling here */
+}
+```
+
+**Suggestions wrapper:**
+```css
+.search-suggestions {
+    /* your extra styling here */
+}
+```
+
+**EACH suggestion:**
+```css
+.search-suggestions a {
+    /* your extra styling here */
+}
+```
+
 ---
 
 ### Usage notes:
