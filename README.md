@@ -9,6 +9,9 @@
 **Author:** HT (@&#x200A;glenthemes)  
 **Tumblr post:** [glenthemes.tumblr.com/post/163630663674](https://glenthemes.tumblr.com/post/163630663674)
 
+**Credits:**
+- `height:auto` animation via `grid-template-rows` by [Nelson Menezes](https://nemzes.net/posts/animating-height-auto).
+
 ---
 
 #### Table of Contents:
