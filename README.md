@@ -177,7 +177,7 @@ Feel free to remove this block of code and adjust it to fit your theme.
 ---
 
 #### Step 3 &mdash; use your own suggestions:
-From the huge chunk of code you pasted in [Step 1](#step-1-essentials), the actual **content** of the searchbar starts at:
+From the huge chunk of code you pasted in [Step 1](#step-1--essentials), the actual **content** of the searchbar starts at:
 ```html
 <!--✻✻✻✻✻✻ START search ✻✻✻✻✻✻-->
 ```
