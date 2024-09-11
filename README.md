@@ -11,7 +11,7 @@
 ---
 
 #### Table of Contents:
-- [About](#searchbar-with-custom-search-suggestions)
+- [About](#magsearchbar-with-custom-search-suggestions)
 - [Demo&#x2009;/&#x2009;Preview](#demo)
 - [How it works](#how-it-works)
 - [Tumblr or elsewhere](#tumblr-or-elsewhere)
@@ -19,7 +19,7 @@
 - [How to install](#how-to-install)
 - [Further customization](#further-customization)
 - [Usage notes](#usage-notes)
-- [Need help?](#issues-troubleshooting)
+- [Need help?](#issues--troubleshooting))
 
 ---
 
@@ -27,6 +27,9 @@
 :mag:&ensp;[search-dropdown.gitlab.io/i/demo](https://search-dropdown.gitlab.io/i/demo)  
 
 <img alt="A GIF screenshot of OP demonstrating this widget by typing 'hello world :)' into the searchbar. When the searchbar is focused, a suggestions box appears with a slide-down animation. They then hover over the provided suggestions, namingly #photography, #art shares, #fav games, and #cat tag, each with a corresponding emoji preceding it. As the mouseover activates, the text in the searchbar changes to match that suggestion. OP moves the mouse away from the suggestions box, and the searchbar text reverts back to what they were typing before. OP clicks away from the search entirely, and the suggestion box hides by sliding up." src="https://search-dropdown.gitlab.io/i/screenshots/preview.gif" width="600">  
+
+#### Demo code / playground:
+:construction_worker:&ensp;[jsfiddle.net/glenthemes/a7bqhn4k](https://jsfiddle.net/glenthemes/a7bqhn4k)
 
 ---
 
