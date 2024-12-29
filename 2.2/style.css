@@ -1,0 +1,159 @@
+/*----------------------------------------------
+    
+    searchbar with custom search suggestions
+    - written by HT (@glenthemes)
+	
+    github.com/glenthemes/search-dropdown
+    
+----------------------------------------------*/
+
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,500;1,500&family=Golos+Text:wght@400..900&display=swap");
+
+/* box-sizing:border-box */
+.searchbar-field, .searchbar-button button, .search-suggestions, .search-suggestions a {
+	box-sizing:border-box;
+}
+
+/*======== FORM ========*/
+.searchblock {
+  /* grid layout defaults, can be overridden */
+  --Searchbar-Field-Width:auto;
+  --Searchbar-Button-Width:min-content;
+  
+  /* shadow defaults, can be overridden */
+	--Search-Shadow-X-Position:0px;
+	--Search-Shadow-Y-Position:4px;
+  --Search-Shadow-Size:15px;
+  --Search-Shadow-Color-RGB:0,0,0;
+  
+  display:grid; 
+  grid-template-columns:auto min-content;
+  grid-gap:0 var(--Searchbar-Spacing);
+  grid-template-areas: 
+    "input btn"
+    "dd .";
+  
+  max-width:var(--Search-Max-Width);
+  text-align:left;
+  
+  filter:drop-shadow(var(--Search-Shadow-X-Position) var(--Search-Shadow-Y-Position) var(--Search-Shadow-Size) rgba(var(--Search-Shadow-Color-RGB),var(--Search-Shadow-Strength)));
+  
+}
+
+.searchblock[no-shadows]{
+	filter:drop-shadow(0 0 0 transparent);
+}
+
+/*======== TYPING FIELD ========*/
+.searchbar-field {
+	margin:0;
+	width:var(--Searchbar-Field-Width);
+	padding:var(--Searchbar-Field-Padding);
+	background:var(--Searchbar-Field-Background);
+	outline:none;
+	border:1px solid var(--Searchbar-Field-Border);
+	border-radius:var(--Searchbar-Field-Corner-Rounding);
+	font-family:var(--Searchbar-Field-Font);
+	font-size:var(--Searchbar-Field-Font-Size);
+	color:var(--Searchbar-Field-Typing-Color);
+	line-height:100%;
+}
+
+.searchbar-field::placeholder {
+	color:var(--Searchbar-Field-Placeholder-Color)
+}
+
+/*======== SUBMIT BTN ========*/
+.searchbar-button {
+  width:var(--Searchbar-Button-Width);
+}
+
+.searchbar-button button {
+	display:block;
+	width:100%;
+	height:100%;
+  padding:var(--Searchbar-Button-Padding);
+	background:var(--Searchbar-Button-Background);
+	border-radius:var(--Searchbar-Button-Corner-Rounding);
+	font-family:var(--Searchbar-Button-Font);
+	font-size:var(--Searchbar-Button-Font-Size);
+	text-transform:uppercase;
+	letter-spacing:.3px;
+	border:1px solid var(--Searchbar-Button-Border);
+	color:var(--Searchbar-Button-Text-Color);
+	cursor:pointer;
+}
+
+/*======== SEARCH SUGGESTIONS DD ========*/
+.search-suggestions-wrapper {
+	display:grid;
+  grid-template-rows:0fr;
+  grid-area:dd;
+  overflow:hidden;
+  transition:grid-template-rows var(--Search-Suggestions-Expand-Speed) ease-in-out;
+}
+
+.search-suggestions-wrapper[fixed]{
+  position:absolute;
+  top:100%;
+  width:100%;
+}
+
+.wrp-open {
+	grid-template-rows:1fr;
+}
+
+.search-suggestions-inner {
+	min-height:0;
+  visibility:hidden;
+  transition:visibility var(--Search-Suggestions-Expand-Speed) ease-in-out;
+}
+
+.wrp-open .search-suggestions-inner {
+	visibility:visible;
+}
+
+.search-suggestions:not(.search-suggestions-inner .search-suggestions){
+  display:none;
+}
+
+.search-suggestions {
+	margin-top:var(--Search-Suggestion-Box-Top-Gap);
+	width:var(--Searchbar-Field-Width);
+	background:var(--Search-Suggestion-Box-Background);
+	border-radius:var(--Search-Suggestion-Box-Corner-Rounding);
+	border:1px solid var(--Search-Suggestion-Box-Border);
+	overflow:hidden;
+}
+
+.search-suggestions a {
+	display:block;
+	margin:0 var(--Search-Suggestion-Box-Inner-Margin);
+	width:calc(100% - (var(--Search-Suggestion-Box-Inner-Margin) * 2));
+	padding:var(--Search-Suggestion-Items-Padding);
+	border-radius:var(--Search-Suggestion-Items-Corner-Rounding);
+	font-family:var(--Search-Suggestions-Font);
+	font-size:var(--Search-Suggestions-Font-Size);
+	color:var(--Search-Suggestions-Text-Color);
+	transition:all var(--Search-Suggestions-HOVER-Speed) ease-in-out;
+	text-align:left;
+}
+
+.search-suggestions a:first-child {
+	margin-top:var(--Search-Suggestion-Box-Inner-Margin);
+}
+
+.search-suggestions a:last-child {
+	margin-bottom:var(--Search-Suggestion-Box-Inner-Margin);
+}
+
+.search-suggestions:not(.disb-hov) a:hover,
+.search-suggestions a.hov {
+	background:var(--Search-Suggestions-HOVER-Background);
+	color:var(--Search-Suggestions-HOVER-Text-Color);
+}
+
+.searchblock a {
+	text-decoration:none;
+}

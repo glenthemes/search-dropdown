@@ -282,8 +282,8 @@ And remove the `fixed` keyword, such that:
 ### Terms of use:
 
 - Whilst you're free to customize it as much as you want:
-    - Please do not remove the credit.
-    - **If you're a theme maker,** you're welcome to use this in your own theme, just make sure to include a link to [this repository page](https://git.new/glen-searchbar) or [my Tumblr post](https://glenthemes.tumblr.com/post/163630663674).
+	- Please do not remove the credit.
+	- **If you're a theme maker,** you're welcome to use this in your own theme, just make sure to include a link to [this repository page](https://git.new/glen-searchbar) or [my Tumblr post](https://glenthemes.tumblr.com/post/163630663674).
 
 ---
 
